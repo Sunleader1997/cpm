@@ -6,24 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cpm-common" />
-      </profile>
-      <profile name="Annotation profile for cpm" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.42/lombok-1.18.42.jar" />
-        </processorPath>
         <module name="cpm-client" />
+        <module name="cpm-common" />
         <module name="cpm-server" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cpm" options="-parameters" />
       <module name="cpm-client" options="-parameters" />
-      <module name="cpm-common" options="" />
+      <module name="cpm-common" options="-parameters" />
       <module name="cpm-server" options="-parameters" />
     </option>
   </component>

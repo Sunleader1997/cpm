@@ -9,5 +9,4 @@ public class CpmClientApplication {
     public static void main(String[] args) {
         SpringApplication.run(CpmClientApplication.class, args);
     }
-
 }
